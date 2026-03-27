@@ -1,0 +1,12 @@
+# Type: Short summary in present tense (max ~72 chars)
+# Types: Feat | Fix | Chore | Refactor | Docs | Test | Update
+#
+# - Brief description of change 1 in present tense
+# - Brief description of change 2 in present tense
+#
+# Rules enforced by commitlint:
+#   • Header must match  "Type: Summary"
+#   • Body must not be empty
+#   • Every body line must start with "- "
+#   • Summary and type must not be empty
+# Lines starting with "#" are ignored.

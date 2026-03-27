@@ -1,0 +1,137 @@
+{
+    // ── Editor ────────────────────────────────────────────────────────────────
+    "editor.fontFamily": "MesloLGS NF, Consolas, 'Courier New', monospace",
+    "editor.lineNumbers": "relative",
+
+    // ── Workbench ─────────────────────────────────────────────────────────────
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "right",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.xml": "default",
+        "*.so": "default",
+        "*.png": "imagePreview.previewEditor"
+    },
+
+    // ── Security ──────────────────────────────────────────────────────────────
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+
+    // ── Remote ────────────────────────────────────────────────────────────────
+    "remote.SSH.connectTimeout": 1800,
+    "remote.autoForwardPortsSource": "hybrid",
+
+    // ── Python ────────────────────────────────────────────────────────────────
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.autoFormatStrings": true,
+
+    // ── Notebooks ─────────────────────────────────────────────────────────────
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.organizeImports": "explicit"
+    },
+    "notebook.insertFinalNewline": true,
+    "notebook.output.scrolling": true,
+    "notebook.lineNumbers": "on",
+    "notebook.scrolling.revealNextCellOnExecute": "none",
+
+    // ── Shell script ──────────────────────────────────────────────────────────
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+
+    // ── Docker / Compose ──────────────────────────────────────────────────────
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "docker.extension.enableComposeLanguageServer": false,
+
+    // ── Vim ───────────────────────────────────────────────────────────────────
+    "vim.handleKeys": {
+        "<C-b>": false,
+        "<C-j>": false,
+        "<C-f>": false,
+        "<C-p>": false
+    },
+
+    // ── Zen Mode ──────────────────────────────────────────────────────────────
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+
+    // ── Terminal ──────────────────────────────────────────────────────────────
+    "terminal.integrated.tabs.enabled": false,
+
+    // ── LaTeX ─────────────────────────────────────────────────────────────────
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.latex.autoBuild.interval": 1000,
+
+    // ── Markdown ──────────────────────────────────────────────────────────────
+    "markdown-preview-enhanced.codeBlockTheme": "dark.css",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+
+    // ── GitHub Copilot ────────────────────────────────────────────────────────
+    "github.copilot.nextEditSuggestions.enabled": true,
+
+    // ── Chat / Claude ─────────────────────────────────────────────────────────
+    "chat.viewSessions.orientation": "stacked",
+    "chat.mcp.gallery.enabled": true,
+    "claudeCode.preferredLocation": "panel",
+
+    // ── Misc extensions ───────────────────────────────────────────────────────
+    "cmake.showOptionsMovedNotification": false,
+    "lldb.suppressUpdateNotifications": true,
+    "redhat.telemetry.enabled": false,
+    "database-client.autoSync": true,
+    "sqltools.results.location": "current",
+    "mdb.mcp.server": "autoStartEnabled",
+    "containers.containers.label": "ContainerName",
+    "hediet.vscode-drawio.resizeImages": null,
+
+    // ── Peacock colors ────────────────────────────────────────────────────────
+    "peacock.favoriteColors": [
+        { "name": "Angular Red",        "value": "#dd0531" },
+        { "name": "Azure Blue",         "value": "#007fff" },
+        { "name": "JavaScript Yellow",  "value": "#f9e64f" },
+        { "name": "Mandalorian Blue",   "value": "#1857a4" },
+        { "name": "Node Green",         "value": "#215732" },
+        { "name": "React Blue",         "value": "#61dafb" },
+        { "name": "Something Different","value": "#832561" },
+        { "name": "Svelte Orange",      "value": "#ff3d00" },
+        { "name": "Vue Green",          "value": "#42b883" },
+        { "name": "Cyberpunk Pink",     "value": "#ff0057" },
+        { "name": "Neon Teal",          "value": "#00f9ff" },
+        { "name": "Deep Purple",        "value": "#6a0dad" },
+        { "name": "Lime Zest",          "value": "#a6ff00" },
+        { "name": "Electric Indigo",    "value": "#6f00ff" },
+        { "name": "Frost Mint",         "value": "#aaffec" },
+        { "name": "Warm Gold",          "value": "#f9b233" },
+        { "name": "Ocean Depth",        "value": "#004e64" },
+        { "name": "Coral Blush",        "value": "#ff6f61" }
+    ]
+}

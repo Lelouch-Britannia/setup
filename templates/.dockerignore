@@ -1,0 +1,66 @@
+# Ignore version control system files
+.git
+.gitignore
+.gitattributes
+.github/
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Python virtual environments
+.venv/
+env/
+ENV/
+venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdm.toml
+*.pdm.lock
+
+# Ignore node and frontend build files
+.next/
+node_modules/
+*.log
+
+# Ignore Docker files (if not needed in container)
+Dockerfile
+docker-compose.yml
+docker/
+.dockerignore
+
+# Ignore database and project files
+*.db
+*.sqlite3
+*.sql
+*.sqbpro
+*.http
+
+# Ignore general caches
+.cache/
+pip-wheel-metadata/
+dist/
+build/
+
+# Ignore test outputs
+coverage/
+htmlcov/
+*.cover
+*.py,cover
+.tox/
+nosetests.xml
+coverage.xml
+*.log
+
+# Misc
+*.swp
+*.bak
+*.tmp
+*.DS_Store
+Thumbs.db

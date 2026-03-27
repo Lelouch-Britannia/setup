@@ -1,0 +1,130 @@
+---
+# YAML Linting Configuration
+
+# Files to lint
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+  - '.yamllint'
+
+# Files/directories to ignore
+ignore:
+  - /tmp/**
+  - /**/templates/**
+  - /**/.venv/**
+  - /**/venv/**
+  - /**/__pycache__/**
+  - /**/node_modules/**
+  - .git/**
+  - /**/dist/**
+  - /**/build/**
+
+# Linting rules
+rules:
+  anchors:
+    level: warning
+    forbid-undeclared-aliases: true
+    forbid-duplicated-anchors: true
+    forbid-unused-anchors: false
+
+  braces:
+    level: warning
+    min-spaces-inside: 0
+    max-spaces-inside: 2
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+
+  brackets:
+    level: warning
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+
+  colons:
+    level: error
+    max-spaces-before: 0
+    max-spaces-after: 1
+
+  commas:
+    level: error
+    max-spaces-before: 0
+    min-spaces-after: 1
+    max-spaces-after: 1
+
+  comments:
+    level: warning
+    require-starting-space: true
+    ignore-shebangs: true
+    min-spaces-from-content: 2
+
+  comments-indentation:
+    level: warning
+
+  document-end:
+    level: disable
+
+  document-start:
+    level: warning
+    present: true
+
+  empty-lines:
+    level: warning
+    max: 2
+    max-start: 0
+    max-end: 0
+
+  empty-values:
+    level: warning
+    forbid-in-block-mappings: false
+    forbid-in-flow-mappings: true
+
+  float-values:
+    level: disable
+
+  hyphens:
+    level: error
+    max-spaces-after: 1
+
+  indentation:
+    level: error
+    spaces: consistent
+    indent-sequences: true
+    check-multi-line-strings: false
+
+  key-duplicates:
+    level: error
+
+  key-ordering:
+    level: disable
+
+  line-length:
+    level: warning
+    max: 150
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
+
+  new-line-at-end-of-file:
+    level: error
+
+  new-lines:
+    level: error
+    type: unix
+
+  octal-values:
+    level: warning
+    forbid-implicit-octal: true
+    forbid-explicit-octal: false
+
+  quoted-strings:
+    level: disable
+    quote-type: any
+    required: only-when-needed
+
+  trailing-spaces:
+    level: error
+
+  truthy:
+    level: warning
+    allowed-values: ['true', 'false', 'yes', 'no', 'on', 'off']
+    check-keys: false

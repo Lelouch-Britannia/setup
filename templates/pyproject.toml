@@ -1,0 +1,131 @@
+# pyproject.toml template — update [project] fields and [tool.uv.workspace] for each new project
+[project]
+name = "your-project-name"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    # Code quality & formatting
+    "mypy>=1.19.1",
+    "ruff>=0.14.13",
+    "pre-commit>=4.5.1",
+
+    # Testing framework
+    "pytest>=9.0.2",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=7.0.0",
+    "pytest-html>=4.0.0",
+    "pytest-mock>=3.15.1",
+
+    # Type stubs
+    "types-pyyaml>=6.0.12.20250915",
+
+    # Jupyter
+    "ipykernel>=7.2.0",
+]
+test = [
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "pytest-mock>=3.15.1",
+]
+
+# Uncomment and customise if using uv workspaces
+# [tool.uv.workspace]
+# members = ["packages/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "A",     # flake8-builtins
+    "ARG",   # flake8-unused-arguments
+    "ASYNC", # flake8-async
+    "B",     # flake8-bugbear
+    "BLE",   # flake8-blind-except
+    "C4",    # flake8-comprehensions
+    "C90",   # McCabe complexity
+    "D",     # Pydocstyle
+    "DTZ",   # flake8-datetimez
+    "E",     # Pycodestyle errors
+    "EM",    # flake8-errmsg
+    "EXE",   # flake8-executable
+    "F",     # Pyflakes
+    "FAST",  # FastAPI
+    "FBT",   # flake8-boolean-trap
+    "G",     # flake8-logging-format
+    "I",     # isort
+    "ICN",   # flake8-import-conventions
+    "INP",   # flake8-no-pep420
+    "ISC",   # flake8-implicit-str-concat
+    "N",     # PEP8 naming
+    "NPY",   # NumPy-specific
+    "PD",    # pandas-vet
+    "PERF",  # perflint
+    "PIE",   # flake8-pie
+    "PL",    # Pylint
+    "PT",    # flake8-pytest-style
+    "PTH",   # flake8-use-pathlib
+    "Q",     # flake8-quotes
+    "RET",   # flake8-return
+    "RSE",   # flake8-raise
+    "RUF",   # Ruff-specific
+    "S",     # flake8-bandit
+    "SIM",   # flake8-simplify
+    "SLF",   # flake8-self
+    "SLOT",  # flake8-slots
+    "T10",   # flake8-debugger
+    "T20",   # flake8-print
+    "TID",   # flake8-tidy-imports
+    "TRY",   # tryceratops
+    "UP",    # Pyupgrade
+    "W",     # Pycodestyle warnings
+    "YTT",   # flake8-2020
+]
+
+ignore = [
+    "B027",
+    "B904",
+    "BLE001",
+    "C901",
+    "D100", "D101", "D102", "D103", "D104", "D105", "D107",
+    "D203",
+    "E501",
+    "EM101",
+    "F401",
+    "G004",
+    "FBT001",
+    "N818",
+    "PLR0912", "PLR0913", "PLR0915",
+    "PERF203",
+    "RET504",
+    "RUF012",
+    "TRY003", "TRY201", "TRY300",
+]
+
+[tool.ruff.lint.isort]
+force-single-line = false
+lines-after-imports = 2
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**/*" = ["ANN", "PLR2004", "S101", "TID252", "D", "S311", "T201", "PTH", "PT009", "PT027", "BLE001", "PLC0415", "S314", "T203", "B017"]
+"**/test_*.py"  = ["ANN", "PLR2004", "S101", "TID252", "D", "S311", "T201", "PTH", "PT009", "PT027", "BLE001", "PLC0415", "S314", "T203", "B017"]
+"ci/**/*"       = ["T201", "PLR2004", "S101", "D", "S311", "INP001"]
