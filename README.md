@@ -1,0 +1,2 @@
+# setup
+Linux CLI Setup
